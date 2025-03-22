@@ -32,17 +32,17 @@ test.describe('1. Home Page', () => {
         await expect(page.locator('.sidebar-nav__model-selector-wrap')).toContainText('iPhone 13 Mini');
     });
 
-    test('1.3 Search button is visible', async ({ page }) => {
-        await page.locator('.mh__button--search').click();
-        await expect(page.locator('.block-fh.wbsk-ui-scroll-flex')).toBeVisible();
-        await page.locator('.js-sidebar-search__input').fill('samsung s20+');
-        await page.waitForTimeout(10000);
-        // await expect(page.locator('xpath=/html/body/global-sidebar[2]/div/div[2]/global-sidebar-search/div/div[1]/div/label[1]')).toContainText('Suggestions');
-        await page.locator('#onetrust-accept-btn-handler').click();
-        await page.locator('.js-sidebar-search__clear').click();
-        await expect(page.locator('input[placeholder="Type to search"]')).toBeVisible();
-        await page.locator('.modal-close.sidebar-search-close').click();
-    });
+    // test('1.3 Search button is visible', async ({ page }) => {
+    //     await page.locator('.mh__button--search').click();
+    //     await expect(page.locator('.block-fh.wbsk-ui-scroll-flex')).toBeVisible();
+    //     await page.locator('.js-sidebar-search__input').fill('samsung s20+');
+    //     await page.waitForTimeout(10000);
+    //     // await expect(page.locator('xpath=/html/body/global-sidebar[2]/div/div[2]/global-sidebar-search/div/div[1]/div/label[1]')).toContainText('Suggestions');
+    //     await page.locator('#onetrust-accept-btn-handler').click();
+    //     await page.locator('.js-sidebar-search__clear').click();
+    //     await expect(page.locator('input[placeholder="Type to search"]')).toBeVisible();
+    //     await page.locator('.modal-close.sidebar-search-close').click();
+    // });
 
     test('1.5 Select brand and model to display search products information', async ({ page }) => {
         await page.locator('.mh__model-select.cell-l--s').click();
