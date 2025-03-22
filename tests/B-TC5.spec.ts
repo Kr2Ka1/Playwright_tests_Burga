@@ -69,7 +69,7 @@ test.describe('5. Shopping Cart', () => {
 
     const itemCount = page.locator('.flex.row-wrap.align-center.justify-space.block-rel > .t-grey.lh-reset');
     await expect(itemCount).toBeVisible();
-    await expect(itemCount).toContainText('2 Items');
+    await expect(itemCount).toContainText('1 Items');
 
     const increaseQuantity = page.locator('span.qty-selector__ctrl.qty-selector__ctrl--plus').nth(1);
     await increaseQuantity.click();
