@@ -2,7 +2,9 @@
   "name": "playwright_tests_burga",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test-parallel": "playwright test --workers=4"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
