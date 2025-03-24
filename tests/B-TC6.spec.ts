@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+test.describe.configure({ mode: 'parallel' });
 
 async function addProductsToCart(page) {
   const allCollection = page.locator('.embla__container > [href="/collections/all"]');

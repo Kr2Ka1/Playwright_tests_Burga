@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+test.describe.configure({ mode: 'parallel' });
 
 test.describe('9. Footer Links', () => {
   

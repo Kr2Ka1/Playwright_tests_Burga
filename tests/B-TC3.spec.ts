@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+test.describe.configure({ mode: 'parallel' });
 
 test.describe('3. Product Details Page', () => {
   test.beforeEach(async ({ page }) => {

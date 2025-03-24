@@ -1,5 +1,7 @@
 import { test, expect } from '@playwright/test';
 
+test.describe.configure({ mode: 'parallel' });
+
 test.describe('1. Home Page', () => {
     test.beforeEach(async ({ page }) => {
         test.setTimeout(60000); // Increase timeout

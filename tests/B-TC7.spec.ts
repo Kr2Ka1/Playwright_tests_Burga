@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-
+test.describe.configure({ mode: 'parallel' });
 const BASE_URL = 'https://eu.burga.com/';
 
 test.describe('7. User Account', () => {
